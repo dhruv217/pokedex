@@ -1,0 +1,30 @@
+<ng-container *ngIf="pokemons$ | async as pokemons">
+  <div class="pokemons-list-grid" (scroll)="onNext($event)">
+    <mat-card
+      class="pokemon-card"
+      *ngFor="let pokemon of pokemons; trackBy: trackPokemon"
+    >
+      <div style="display: flex; flex-direction: row;">
+        <img
+          [src]="pokemon.sprites.front_shiny"
+          width="96px"
+          style="display: block"
+        />
+        <div
+          style="display: flex; flex-direction: column; justify-content: center"
+        >
+          <h2 mat-h2 style="text-transform: capitalize;">
+            #{{ pokemon.id }}: {{ pokemon.name }}
+          </h2>
+          <mat-chip-list aria-label="Pokemon Types">
+            <mat-chip
+              *ngFor="let type of pokemon.types"
+              [class]="[type.type.name, 'type']"
+              >{{ type.type.name }}</mat-chip
+            >
+          </mat-chip-list>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</ng-container>

@@ -1,5 +1,14 @@
 # Pokedex
 
+This is an inspiration from pokedex.org and a bit of flexing my angular muscles.
+
+# Stuff Remaining
+  1> Search ( Api Not on pokeapi.co)
+  2> Pokemon Details page.
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
 
 ## Development server
