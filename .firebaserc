@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "pokemon-dict": {
+      "hosting": {
+        "pokedex": [
+          "pokemon-dict"
+        ]
+      }
+    }
+  }
+}
